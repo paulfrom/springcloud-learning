@@ -24,12 +24,15 @@ public class UserServiceImpl implements UserService {
 
     public User generateUserById(int id){
         log.info("from ========== {}",from);
-        return User.builder()
-                .id(id)
-                .name("yes")
-                .address("Wastion town")
-                .age(20)
-                .build();
+        if(id%2==0) {
+            return User.builder()
+                    .id(id)
+                    .name("yes")
+                    .address("Wastion town")
+                    .age(20)
+                    .build();
+        }
+        throw new RuntimeException("not even");
     }
 }
 

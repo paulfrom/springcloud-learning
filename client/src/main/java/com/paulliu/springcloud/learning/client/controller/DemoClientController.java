@@ -23,8 +23,8 @@ public class DemoClientController {
     UserService userService;
 
     @GetMapping(value = "/index")
-    public User index() {
-        User result = userService.generateUserById(1);
+    public User index(Integer id) {
+        User result = userService.generateUserById(id);
         log.info("index date {}:", result);
         return result;
     }
