@@ -3,10 +3,7 @@ package com.paulliu.springcloud.learning.service.impl;
 import com.paulliu.springcloud.learn.api.moudle.User;
 import com.paulliu.springcloud.learn.api.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -19,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class UserServiceImpl implements UserService {
 
-    @Value("${from}")
+//    @Value("${from}")
     private String from;
 
     public User generateUserById(int id){
